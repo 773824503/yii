@@ -18,8 +18,8 @@ class HomeController extends Controller
         $method = new Method();
         $res = $method->add(30,30);
         Yii::$app->redis->set('a',123);
-        echo Yii::$app->redis->get('a');
-        echo "<br>";
+        echo Yii;;$app->redis->get('a');
+   
         echo "hello world  ".$res;die;
         return $this->render('index');
     }
