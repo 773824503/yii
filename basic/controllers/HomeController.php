@@ -17,10 +17,15 @@ class HomeController extends Controller
     {
         $method = new Method();
         $res = $method->add(30,30);
-        Yii::$app->redis->set('a',123);
-        echo Yii::$app->redis->get('a');
-        echo "<br>";
-        echo "hello world  ".$res;die;
-        return $this->render('index');
+        // Yii::$app->redis->set('a',123);
+        //echo Yii::$app->redis->get('a');
+        //Yii::$app->view;
+        //echo "<br>";
+        //echo "hello world  ".$res;die;
+        //return $this->render('index');
+        //$this->smarty->assign('abc',$res);
+        //$this->smarty->display('index.tpl');
+        //return $this->render('app\views\site\index.tpl',['abc'=>$res]);
+        return $this->renderPartial('index.tpl', ['username' => 'zhangsan']); 
     }
 }

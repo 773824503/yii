@@ -39,20 +39,40 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
         'redis' => [
             'class' => 'yii\redis\Connection',
             'hostname' => 'localhost',
             'port' => 6379,
             'database' => 0,
         ],
+        /*'view' => [
+            'class' => 'app\library\View',
+            'renderers' => [
+                'tpl' => [
+                    'class' => 'yii\smarty\ViewRenderer',
+                    'cachePath' => '@runtime/Smarty/cache',
+                    'left_delimiter' => '{{',
+                    'right_delimiter' => '}}',
+                ],
+            ],
+
+        ],*/
+        'view' => [  
+            'renderers' => [  
+                'tpl' => [  
+                    'class' => 'yii\smarty\ViewRenderer',  
+                    'cachePath' => '@runtime/Smarty/cache',  
+                ],  
+            ],  
+        ],  
 
     ],
     'params' => $params,
