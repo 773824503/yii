@@ -26,6 +26,7 @@ class HomeController extends Controller
         //$this->smarty->assign('abc',$res);
         //$this->smarty->display('index.tpl');
         //return $this->render('app\views\site\index.tpl',['abc'=>$res]);
+        Yii::info("da");
         return $this->renderPartial('index.tpl', ['username' => 'zhangsan']); 
     }
 }
