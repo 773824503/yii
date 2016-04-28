@@ -8,7 +8,7 @@
 namespace app\assets;
 
 use yii\web\AssetBundle;
-
+use yii\bootstrap\BootstrapPluginAsset;
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
@@ -19,8 +19,11 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
+        'http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css',
     ];
     public $js = [
+        'http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js',
+        'http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
